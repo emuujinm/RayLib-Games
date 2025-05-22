@@ -1,39 +1,22 @@
----------------------------------------------------------------------------------------
-Welcome to raylib 5.0
----------------------------------------------------------------------------------------
+This project is a collection of simple games developed using C/C++ and the Raylib graphics library as part of the Data Structures course. The games include both single-player and multiplayer modes.
 
-raylib is a simple and easy-to-use library to enjoy videogames programming.
+Games:
+- Ping Pong (2 players)
+- Snake (1 player, runner style)
+- Checkdrop (2 players, similar to Connect Four)
 
-raylib installer package for Windows provides all the required tools preconfigured 
-to start coding games/graphics/tools with raylib in a few seconds.
+Library: [Raylib](https://www.raylib.com/)
 
-raylib Windows installer package installs raylib by default in: C:\raylib 
-Directory is self-contained and portable, including all required tools:
+1. Installation: [https://github.com/raysan5/raylib/wiki](https://github.com/raysan5/raylib/wiki)
 
- - raylib 5.0 library with source code, examples and several preconfigured projects
- - Notepad++ 8.5.8 (npp) preconfigured with some scripts to compile raylib and examples
- - Portable C and C++ Development Kit for x64 Windows (https://github.com/skeeto/w64devkit)
-     - w64devkit 1.20.0 contains multiple tools and MinGW-w64 with GCC 13.2.0 (64bit)
+2. Clone: git clone https://github.com/your-username/your-repo-name.git 
+          cd your-repo-name
 
-A "Notepad++ for raylib" shortcut is created on desktop and once the program is open, 
-it opens raylib.h header file, for API reference, and core_basic_window.c example. 
-
-Pressing F6 should open NppExec script system to compile and run the example.
-
-It's recommended to check other examples on raylib/raylib/examples as learning material.
-
-
-LICENSES
-
-All the tools and libraries included in this package are licensed as free and 
-open source with permissive licenses for redistribution. 
-
- - raylib is licensed as zlib: 
-       https://github.com/raysan5/raylib/blob/master/LICENSE
- - Notepad++ is licensed as GNU GPL: 
-       https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/LICENSE
- - w64devkit is licensed as UNLICENSE: 
-       https://github.com/skeeto/w64devkit/blob/master/UNLICENSE
-
-Check raylib/w64devkit/COPYING.MinGW-w64-runtime.txt for license details for the
-multiple components included in the MinGW-w64 package.
+3. Compile:
+   On Linux/macOS:
+   gcc -o game main.c -lraylib -lm -ldl -lpthread -lGL -lrt -lX11
+   ./game
+   
+   On Windows (using MinGW):
+   gcc -o game.exe main.c -lraylib -lopengl32 -lgdi32 -lwinmm
+   game.exe
